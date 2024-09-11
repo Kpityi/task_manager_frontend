@@ -1,0 +1,61 @@
+.snackbar {
+  z-index: 1000;
+  padding: 0.8rem 1.8rem;
+  color: white;
+  position: fixed;
+  top: -20rem;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: ease-in-out 600ms;
+
+  &.-show {
+    top: 1rem;
+  }
+
+  &.-success {
+    background-color: rgb(7, 206, 7);
+  }
+
+  &.-error {
+    background-color: red;
+  }
+
+  &.-info {
+    background-color: rgb(135, 135, 255);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  &__icon-box {
+    background-color: whitesmoke;
+    border-radius: 50%;
+    padding: 0 15px;
+    color: black;
+    transform: scale(80%);
+
+    &.-success {
+      color: rgb(7, 206, 7);
+    }
+
+    &.-error {
+      color: red;
+    }
+
+    &.-info {
+      color: rgb(135, 135, 255);
+    }
+  }
+  &__icon {
+    line-height: 1;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    transform: scale(180%);
+  }
+  &__text {
+    text-align: center;
+  }
+}

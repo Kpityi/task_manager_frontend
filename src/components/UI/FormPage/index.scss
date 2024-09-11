@@ -1,0 +1,94 @@
+.form-page {
+  color: rgb(0, 31, 43);
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-200%);
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  transition: ease-in-out 600ms;
+
+  &.-show {
+    transform: translateY(0);
+    overflow: scroll;
+  }
+
+  &__container {
+    padding: 1rem;
+    margin: 5rem auto;
+    background-color: rgb(237, 244, 255);
+    border-radius: 25px;
+    width: 50%;
+    height: auto;
+    -webkit-box-shadow: 3px 3px 7px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 3px 3px 7px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 7px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  &__form-element {
+    color: rgb(0, 31, 43);
+    width: 70%;
+    display: block;
+    text-align: left;
+    background-color: rgb(237, 244, 255);
+    margin: 1rem auto;
+
+    @media only screen and (max-width: 340px) {
+      width: 50%;
+      margin: 1rem auto;
+    }
+  }
+
+  &__error-message {
+    text-align: left;
+    margin: 0.2rem 3rem;
+    color: rgb(128, 0, 32);
+    font-weight: 400;
+    font-size: smaller;
+  }
+
+  &__select-container {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 540px) {
+      flex-direction: column;
+    }
+  }
+
+  &__priority-container,
+  &__status-container {
+    width: 40%;
+
+    @media only screen and (max-width: 540px) {
+      width: 70%;
+      margin: auto;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: 540px) {
+      display: block;
+      text-align: center;
+      margin: 0.2rem auto;
+    }
+  }
+  &__button {
+    width: 150px;
+    margin: 2rem 2rem;
+
+    &.-disabled {
+      background-color: gray;
+    }
+
+    @media only screen and (max-width: 540px) {
+      margin: 0.2rem auto;
+    }
+  }
+}

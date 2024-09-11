@@ -1,0 +1,98 @@
+.task-card {
+  width: 30%;
+  text-align: left;
+  background-color: rgb(237, 244, 255);
+  color: rgb(0, 31, 43);
+  margin: 1rem auto;
+  padding: 0.5rem;
+  border-radius: 20px;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 1rem;
+    width: 40%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  & .low {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: grey;
+  }
+  & .mid {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: yellow;
+  }
+  & .high {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and (max-width: 640px) {
+      display: block;
+      text-align: center;
+      margin: 0.2rem auto;
+    }
+  }
+
+  &__title-text {
+    margin: auto 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  &__description-header {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 320px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__status-text {
+    font-weight: 600;
+  }
+
+  &__description-title {
+    font-weight: 600;
+  }
+
+  &__date {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  &__separator {
+    color: rgb(0, 0, 0, 0.4);
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+
+    @media only screen and (max-width: 340px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__button {
+    @media only screen and (max-width: 340px) {
+      margin: 0.5rem auto;
+    }
+  }
+}
