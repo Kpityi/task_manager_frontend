@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   font-size: clamp(0.5rem, 2vw, 1rem);
   transition: ease-in-out 600ms;
   &.-show {
@@ -17,22 +17,48 @@
     background-color: rgb(237, 244, 255);
     border-radius: 25px;
     width: 50%;
-    height: 50%;
     -webkit-box-shadow: 3px 3px 7px 4px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 3px 3px 7px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 3px 3px 7px 4px rgba(0, 0, 0, 0.3);
+
+    @media only screen and (max-width: 300px) {
+      width: 80%;
+    }
   }
   &__message {
     color: rgb(0, 31, 43);
     text-align: center;
     padding: 3rem 1.5rem;
+
+    @media only screen and (max-width: 300px) {
+      padding: 0.5rem;
+    }
   }
   &__buttons {
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: 450px) {
+      display: block;
+      text-align: center;
+    }
   }
+
   &__button {
     width: 150px;
     margin: 2rem 2rem;
+
+    @media only screen and (max-width: 480px) {
+      transform: scale(90%);
+      margin: 1.5rem;
+    }
+    @media only screen and (max-width: 480px) {
+      transform: scale(90%);
+      margin: 0.5rem;
+    }
+    @media only screen and (max-width: 300px) {
+      transform: scale(60%);
+      margin: 0.5rem;
+    }
   }
 }

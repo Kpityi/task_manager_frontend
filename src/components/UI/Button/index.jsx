@@ -24,11 +24,7 @@ const Button = ({ label, className, disabled, icon, ...props }) => {
   return (
     <button className={mode} disabled={disabled} {...props}>
       {icon != "none" ? (
-        <img
-          className="button__icon"
-          src={`/public/${button_icon}`}
-          alt={icon}
-        />
+        <img className="button__icon" src={`/${button_icon}`} alt={icon} />
       ) : null}
       {label}
     </button>
